@@ -7,9 +7,9 @@ export default function NavBar(){
         <nav style={styles.nav}>
             <h2 style={styles.logo}> Mi Tienda</h2>
             <ul style={styles.menu}>
-                <li>Inicio</li>
-                <li>Productos</li>
-                <li>Contacto</li>
+                <li>remera</li>
+                <li>buzo</li>
+                <li>campera</li>
             </ul>
             <CartWidget/>
     </nav>
@@ -26,5 +26,5 @@ const styles={
         color:"white"
     },
     logo:{margin:0},
-    menu:{display:"flex",listStyle:"none",gap:"15px"}
+    menu:{display:"flex ",listStyle:"none",gap:"20px"}
 };
