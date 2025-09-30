@@ -1,9 +1,16 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function StateComponent(){
     
     const [ color, setColor] = useState("#03010aff")
-
+    console.log("renderizando State Comp");
+    
+    
+    useEffect(()=>{
+        console.warn("tarea de montaje")
+        console.warn("acceso al dom")
+    },[])
+    
     return(
         <div>
             <p>selecciona tu color - color activo:
