@@ -5,8 +5,8 @@ const products = [
     "img": "https://i.pinimg.com/736x/da/30/05/da300559ddd9d349dc5868109a2b9425.jpg",
     "description": "Una taza de cerámica con el lema 'I code because I love coffee'. Es perfecta para desarrolladores y amantes de la cafeína.",
     "price": 12.99,
-    "stock": 55,
-    "category": "Hogar"
+    stock: 55,
+    category: "Hogar"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@ const products = [
     "description": "Teclado mecánico de tamaño completo con interruptores táctiles y retroiluminación RGB personalizable.",
     "price": 89.99,
     "stock": 30,
-    "category": "Electrónica"
+    "category": "Electronica"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@ const products = [
     "description": "Ratón inalámbrico con diseño vertical para reducir la tensión de la muñeca. Mejora la postura de trabajo.",
     "price": 35.50,
     "stock": 70,
-    "category": "Electrónica"
+    "category": "Electronica"
   },
   {
     "id": 4,
@@ -51,7 +51,7 @@ const products = [
     "description": "Pantalla LED curva de 27 pulgadas, resolución 2K y una tasa de refresco de 144Hz. Experiencia inmersiva.",
     "price": 349.99,
     "stock": 15,
-    "category": "Electrónica"
+    "category": "Electronica"
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@ const products = [
     "description": "Webcam con resolución Full HD 1080p y micrófono integrado. Perfecta para videollamadas.",
     "price": 29.99,
     "stock": 65,
-    "category": "Electrónica"
+    "category": "Electronica"
   },
   {
     "id": 8,
@@ -87,7 +87,7 @@ const products = [
     "description": "Unidad de estado sólido portátil de 1TB. Altas velocidades de transferencia con conexión USB-C.",
     "price": 99.99,
     "stock": 25,
-    "category": "Electrónica"
+    "category": "Electronica"
   },
   {
     "id": 11,
@@ -123,7 +123,7 @@ const products = [
     "description": "Auriculares over-ear con cancelación activa de ruido (ANC) y hasta 30 horas de reproducción.",
     "price": 129.50,
     "stock": 35,
-    "category": "Electrónica"
+    "category": "Electronica"
   },
   {
     "id": 15,
@@ -137,7 +137,7 @@ const products = [
   {
     "id": 16,
     "title": "Batería Externa 20000mAh",
-    "img": "/images/powerbank_20k.jpg",
+    "img": "https://i.pinimg.com/736x/bd/46/67/bd4667e84fde73343c1d25b69a7d3e64.jpg",
     "description": "Power bank de alta capacidad con doble puerto de carga USB. Pantalla LED de nivel de batería.",
     "price": 40.00,
     "stock": 50,
@@ -145,8 +145,8 @@ const products = [
   },
   {
     "id": 17,
-    "title": "Kit de Herramientas para PC (32 en 1)",
-    "img": "/images/kit_herramientas.jpg",
+    "title": "tv led (32 en 1)",
+    "img": "https://i.pinimg.com/originals/2a/96/98/2a96988c150a0e63ad2ecb0efcc293fc.jpg",
     "description": "Juego completo de destornilladores de precisión y herramientas para el mantenimiento de dispositivos electrónicos.",
     "price": 22.90,
     "stock": 44,
@@ -155,16 +155,16 @@ const products = [
   {
     "id": 18,
     "title": "Cable HDMI 2.1 (4K/8K)",
-    "img": "/images/cable_hdmi.jpg",
+    "img": "https://i.pinimg.com/736x/5a/88/65/5a88650afa11460599d969457d1597d7.jpg",
     "description": "Cable HDMI de 2 metros con soporte para 4K a 120Hz y 8K a 60Hz. Conectores bañados en oro.",
     "price": 15.25,
     "stock": 95,
-    "category": "Electrónica"
+    "category": "Electronica"
   },
   {
     "id": 19,
     "title": "Gafas Anti Luz Azul (Gaming)",
-    "img": "/images/gafas_azul.jpg",
+    "img": "https://i.pinimg.com/474x/e8/0c/4e/e80c4ee9270c021c63fb79c2df541106.jpg",
     "description": "Gafas protectoras con filtro para reducir la fatiga visual causada por la luz azul de las pantallas.",
     "price": 14.50,
     "stock": 75,
@@ -173,7 +173,7 @@ const products = [
   {
     "id": 20,
     "title": "Termo Inteligente (Temp. LED)",
-    "img": "/images/termo_inteligente.jpg",
+    "img": "https://i.pinimg.com/736x/84/ee/99/84ee9967ecd40ee692df34807e0ef02b.jpg",
     "description": "Termo de acero inoxidable con sensor de temperatura y pantalla LED en la tapa. Mantiene el calor por horas.",
     "price": 28.99,
     "stock": 38,

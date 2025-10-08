@@ -1,13 +1,25 @@
 import { useEffect, useState } from "react";
-import getMockAPIData from"../data/mockAPI";
+import getMockAPIData, { getProductsByCateg } from"../data/mockAPI";
 import Item from"./Item";
-
+import { useParams } from "react-router";
 
 export default function ItemListContainer(props){
     
     const[products, setProducts]= useState([]);
+    const{categParam}= useParams([]);
 
-    useEffect(()=>{
+    getProductsByCateg(categParam)
+    .then(
+        (getProductsByCateg)
+    )
+
+    useEffect( ()=>{
+        
+        if (categParam){
+            getProductsByCateg(categParam)
+            .then (productsByCateg => setProducts(productsByCateg))
+        }
+        else {
         getMockAPIData()
         .then((productsList)=>{
             setProducts(productsList);
@@ -19,19 +31,24 @@ export default function ItemListContainer(props){
             })
         .finally(()=>{
             console.log("se ajusta")
-        }
-        )
-    },[]);
+        })
+    }
+    },[categParam])
+
     console.log(products);
+
     return(
         <div>
         <h2>{props.greeting}</h2>
-        <h3>nuestros productos</h3>
+        {products.length === 0 ? <p>cargando...</p>:""}
+        <div>
+        <h3>Nuestros Productos</h3>
         <div style={{display:"flex", gap:"30px", flexDirection:"row", flexWrap:"wrap"}}>
         {
             products.map(
-                item=> <Item {...item} />
+                item=> <Item key={item.id}{...item} />
             ) }
+            </div>
         </div>
         </div>
     )

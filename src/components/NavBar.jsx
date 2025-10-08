@@ -8,13 +8,33 @@ export default function NavBar(){
             <Link to="/">
             <h2 style={styles.logo}> Mi Tienda</h2>
             </Link>
-            <Link to="/detalle"> DETALLE </Link>
+            
             <ul style={styles.menu}>
-                <li>Ropa</li>
-                <li>Libreria</li>
-                <li>Electronica</li>
+                
+                <li>
+                <Link to="/category/Ropa">
+                Ropa
+                </Link>
+                </li>
+                <li>
+                    < Link to="/category/Accesorios" >
+                    Accesorios
+                    </Link>
+                    </li>
+                    <li>
+                <Link to="/category/Electronica">
+                    Electronica
+                </Link>
+                </li>
+                <li>
+                    <Link to="/category/Hogar">
+                    Hogar
+                    </Link>
+                </li>
             </ul>
-            <CartWidget/>
+            <Link to="/cart">
+            <span><CartWidget/></span>
+            </Link>
     </nav>
     );
 };

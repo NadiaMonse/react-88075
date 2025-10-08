@@ -1,10 +1,11 @@
 
 import NavBar from './components/NavBar'
 import './App.css'
-import ItemListContainer from './components/itemListConteiner'
+import ItemListContainer from './components/itemListContainer'
 import Item from './components/Item'
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 
 export default function App(){
     const[page, setPage]= useState("home")
@@ -15,9 +16,10 @@ export default function App(){
     <BrowserRouter>
         <NavBar/>
         <Routes>
-        <Route path='/' element={<ItemListContainer greeting="Bienvenidos a mi tienda online!"/> }/>
-        <Route path='/detalle' element={ <h1>detalle</h1>}/>
-        <Route path='*'element={ <h1>pagina no encontrada</h1>}/>
+        <Route path='category/:categParam' element={ <ItemListContainer/>}/>
+        <Route path="/" element={<ItemListContainer greeting="Bienvenidos a mi tienda online!"/> }/>
+        <Route path="/detalle/:idParam" element={ <ItemDetailContainer/>}/>
+        <Route path="*"element={ <h1></h1>}/>
         </Routes>
         
     </BrowserRouter>)
