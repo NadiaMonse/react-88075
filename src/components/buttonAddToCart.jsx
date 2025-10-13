@@ -6,13 +6,13 @@ import { useState } from "react";
     const [statusInCart, setStatusInCart]=useState("no agregar al carrito")
     
     function handleClick(){
-        alert("gracias por agregarme al carrito")
+        alert("Gracias por agregarme !")
         setStatusInCart("producto agregado al carrito!")
     }
     return(
         <div>
-            <button onClick={handleClick}>agregar al carrito</button>
-            <br />
+            <button onClick={handleClick}>Agregar al carrito</button>
+            <br /><button onClick={handleClick}>agregar al carrito</button>
             <small>{statusInCart}</small>
             
         </div>

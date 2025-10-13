@@ -132,7 +132,7 @@ const products = [
     "description": "Cuaderno de tapa dura A5 con páginas punteadas. Ideal para organización, bocetos y 'bullet journaling'.",
     "price": 7.99,
     "stock": 120,
-    "category": "Papelería"
+    "category": "Ropa"
   },
   {
     "id": 16,

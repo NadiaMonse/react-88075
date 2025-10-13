@@ -33,6 +33,7 @@ export default function NavBar(){
                 </li>
             </ul>
             <Link to="/cart">
+            
             <span><CartWidget/></span>
             </Link>
     </nav>
@@ -45,7 +46,8 @@ const styles={
         justifyContent: "space-between",
         alignItems:"center",
         padding:"10px 20px",
-        backgroundColor:"#e935daff",
+        margin:"0px",
+        backgroundColor:"#87398aff",
         color:"white"
     },
     logo:{margin:0},
