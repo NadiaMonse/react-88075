@@ -1,26 +1,28 @@
 import { useEffect, useState } from "react";
-import getMockAPIData, { getProductsByCateg } from"../data/mockAPI";
+import { getProductsById } from"../data/firebase";
+import { getProducts,getProductsByCateg } from "../data/firebase";
 import Item from"./Item";
 import { useParams } from "react-router";
+
 
 export default function ItemListContainer(props){
     
     const[products, setProducts]= useState([]);
-    const{categParam}= useParams([]);
+    const[isLoading, setIsLoading] = useState(true)
+    const{categParam}= useParams();
 
-    getProductsByCateg(categParam)
-    .then(
-        (getProductsByCateg)
-    )
 
     useEffect( ()=>{
+        setIsLoading(true)
         
         if (categParam){
             getProductsByCateg(categParam)
             .then (productsByCateg => setProducts(productsByCateg))
+            .catch (error =>alert(error))
+            .finally(()=> setIsLoading(false))
         }
         else {
-        getMockAPIData()
+        getProducts()
         .then((productsList)=>{
             setProducts(productsList);
         })
@@ -31,11 +33,10 @@ export default function ItemListContainer(props){
             })
         .finally(()=>{
             console.log("se ajusta")
+            setIsLoading(false)
         })
     }
     },[categParam])
-
-    console.log(products);
 
     return(
         <div>
